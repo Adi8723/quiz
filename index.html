@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>QuizApp</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body onload="init()">
+
+	<nav class="navbar bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">QuizApp</a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="card" style="width: 40rem;">
+
+			<img src="quiz.png" class="card-img-top" id="img1" alt="#">
+			<div class="progress">
+				<div class="progress-bar" id="percent" role="progressbar" style="width: 20%;">20%</div>
+			</div>
+			<div id="endQuiz" class="card-body d-none" id="endScreen">
+
+				<div>
+					<img src="ende.png" class="width100" alt="" id="img">
+					<h2>Quiz Beendet</h2>
+				</div>
+				<h6>Sie haben <strong id="rightAnswer">von</strong> Fragen von
+					<strong id="allQ">richtig</strong> richtig beantwortet
+				</h6>
+				<button class="btn btn-primary" onclick="reStart()">restart</button>
+			</div>
+
+			<div class="card-body body" id="quessionBody">
+				<h5 class="card-title" id="queassonText">Frage</h5>
+				<div class="card quizAnswerCard  mb-2" onclick="answer('answer_1')">
+					<div class="card-body" id="answer_1">
+						antwort
+					</div>
+				</div>
+				<div class="card quizAnswerCard  mb-2" onclick="answer('answer_2')">
+					<div class="card-body" id="answer_2">
+						antwort
+					</div>
+				</div>
+				<div class="card quizAnswerCard  mb-2" onclick="answer('answer_3')">
+					<div class="card-body" id="answer_3">
+						antwort
+					</div>
+				</div>
+				<div class="card quizAnswerCard  mb-2" onclick="answer('answer_4')">
+					<div class="card-body" id="answer_4">
+						antwort
+					</div>
+				</div>
+				<hr>
+				<div class="quessionFooter">
+					<div class="m-2"><b id="whichQuession"></b> von <b id="allQuession">5</b> fragen</div>
+
+					<button class="btn btn-primary" id="btn" disabled onclick="next()">next</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<script src="js.js"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
